@@ -1,0 +1,23 @@
+{
+  "name": "bg-graph-api",
+  "version": "1.0.0",
+  "description": "Customised Graph API calls for bg",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/animeshth/bg-graph-api.git"
+  },
+  "keywords": [
+    "Graph",
+    "API"
+  ],
+  "author": "Animesh Joshi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/animeshth/bg-graph-api/issues"
+  },
+  "homepage": "https://github.com/animeshth/bg-graph-api"
+}

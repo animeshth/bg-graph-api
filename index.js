@@ -48,5 +48,18 @@ module.exports = {
         });
     });
     return deferred.promise;
+  },
+  fetch_next: function(link) {
+    var deferred = q.defer();
+    https.get(link, function(response) {
+        var body = '';
+        response.on('data', function(d) {
+            body += d;
+        });
+        response.on('end', function() {
+            deferred.resolve(body.toString());
+        });
+    });
+    return deferred.promise;
   }
 };

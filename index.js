@@ -5,7 +5,7 @@ module.exports = {
     var deferred = q.defer();
     https.get({
         host: 'graph.facebook.com',
-        path: '/v2.3/me?feilds=likes&access_token='+access_token
+        path: '/v2.3/me?fields=likes&access_token='+access_token
     }, function(response) {
         var body = '';
         response.on('data', function(d) {
@@ -21,7 +21,7 @@ module.exports = {
     var deferred = q.defer();
     https.get({
         host: 'graph.facebook.com',
-        path: '/v2.3/me?feilds=friends{id,name,picture{height,url,width}}&access_token='+access_token
+        path: '/v2.3/me?fields=friends{id,name,picture{height,url,width}}&access_token='+access_token
     }, function(response) {
         var body = '';
         response.on('data', function(d) {
@@ -35,7 +35,7 @@ module.exports = {
   },
   post_to_fb: function(access_token, link, message, picture, description) {
     var deferred = q.defer();
-    https.get({
+    https.post({
         host: 'graph.facebook.com',
         path: '/v2.3/me/feed?message=hello+this+is+testing&access_token='+access_token+'&link='+link+'&description='+description+'&picture='+picture
     }, function(response) {
